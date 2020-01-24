@@ -1,21 +1,23 @@
-<div class="container">
-  <div class="row">
-    <div class="four columns">
-      {{ currentTitle }}
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="four columns">
+        <div class="title">{{ currentTitle }}</div>
 
-      <div *ngIf="currentCategory; else successfulLogin">
-        <ul>
-          <li *ngFor="let item of currentCategory">
-            <figcaption>{{item.name}}</figcaption>
-           <img (click)="clickItem()" src={{item.img}}/>
-         </li>
-        </ul>
+        <div *ngIf="currentCategory; else successfulLogin">
+          <ul>
+            <li *ngFor="let item of currentCategory">
+              <figcaption>{{item.name}}</figcaption>
+            <img (click)="clickItem()" src={{item.img}}/>
+          </li>
+          </ul>
+        </div>
+
+        <ng-template #successfulLogin>
+          <div>success</div>
+        </ng-template>
       </div>
-
-      <ng-template #successfulLogin>
-        <div>success</div>
-      </ng-template>
     </div>
   </div>
-</div>
+</body>
 

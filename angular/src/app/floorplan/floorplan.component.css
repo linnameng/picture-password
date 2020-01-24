@@ -1,8 +1,19 @@
+
 img {
   height: 70px;
+
+}
+
+.title {
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  font-size: large;
+  color: #E62886;
 }
 
 li {
   list-style-type: none;
-  font-family: 'optima';
+  font-family: 'Oswald', sans-serif;
+  font-size: medium;
+  color: #00A2DE;
 }
