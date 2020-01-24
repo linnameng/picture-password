@@ -9,7 +9,7 @@ const httpOptions = {
 };
 
 @Injectable()
-export class FloorplanService {
+export class SecretStoriesService {
 
   constructor(private http: HttpClient) {}
 

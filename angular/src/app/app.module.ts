@@ -9,14 +9,14 @@ import { VideoComponent } from './video/video.component';
 import { AppRoutingModule } from './app.routing.module';
 import { VideoService } from './video/video.service';
 import { HttpClientModule } from '@angular/common/http';
-import { FloorplanComponent } from './floorplan/floorplan.component';
-import { FloorplanService } from './floorplan/floorplan.service';
+import { SecretStoriesComponent } from './secret-stories/secret-stories.component';
+import { SecretStoriesService } from './secret-stories/secret-stories.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     VideoComponent,
-    FloorplanComponent
+    SecretStoriesComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +26,7 @@ import { FloorplanService } from './floorplan/floorplan.service';
     FormsModule,
     CookieModule.forRoot()
   ],
-  providers: [VideoService, FloorplanService],
+  providers: [VideoService, SecretStoriesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,12 +3,12 @@ import { Router } from '@angular/router';
 import { Item } from '../models/app.models';
 
 @Component({
-  selector: 'app-video',
-  templateUrl: './floorplan.component.html',
-  styleUrls: ['./floorplan.component.css']
+  selector: 'app-secret-stories',
+  templateUrl: './secret-stories.component.html',
+  styleUrls: ['./secret-stories.component.css']
 })
 
-export class FloorplanComponent implements AfterViewInit {
+export class SecretStoriesComponent implements AfterViewInit {
 
   currentCharacter: string;
   currentCategory: Item[] = [];
