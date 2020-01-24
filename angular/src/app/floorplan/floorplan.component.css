@@ -6,3 +6,25 @@ li {
   list-style-type: none;
   font-family: 'optima';
 }
+
+#popjam-logo {
+  width: 170px;
+  height: 65px;
+  position: absolute;
+  left: 50%;
+  top: 12px;
+  margin-left: -85px;
+  background-image: url(popjam-header.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.top-nav {
+  min-height: 90px; 
+  background-color: #090a0f;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 40px;
+  padding-top: 7.5px;
+  padding: 0;
+}
