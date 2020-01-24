@@ -102,7 +102,7 @@
       <a class="button" href="#" (click)="restart()">No, start over</a>
     </div>
 
-    <div *ngIf="currentStage > 0 && currentStage < 4">
+    <div *ngIf="currentStage > 0 && currentStage < 4" class="restart">
       <h5 class="title">Made a mistake?</h5>
       <div class="center-container">
         <a class="button button-primary center" href="#" (click)="restart()">Restart from the beginning</a> <br/>
@@ -110,7 +110,8 @@
     </div>
 
     <div *ngIf="showSuccess">
-      success!
+      <p>Congrats! You've created your <b>Secret Story</b>!</p>
+      <img class="secret-story" src="assets/secret-story.png" />
     </div>
 
 
