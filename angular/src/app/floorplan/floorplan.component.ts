@@ -54,6 +54,8 @@ export class FloorplanComponent implements AfterViewInit {
       this.currentCategory = this.activities;
     } else if (this.currentStage == 2) {
       this.currentCategory = this.clothes;
+    } else if (this.currentStage == 3) {
+      this.currentCategory = undefined;
     }
   }
 
