@@ -1,19 +1,13 @@
 <div class="container">
   <div class="row">
-    <div class="eight columns">
+    <div class="four columns">
       {{ currentCharacter }}
 
-      <table class="chessboard">
-        <tr class="chessboard">
-          <td id="select-superheroes" (click)="clickSuperheroes($event)" class="chessboard"></td>
-          <td class="chessboard"></td>
-        </tr>
-      </table>
-      <ul>
-         <li *ngFor="let hero of heroes">
-          {{hero.id}} {{hero.name}} {{hero.img}}
-        </li>
-      </ul>
+        <ul>
+          <li *ngFor="let item of currentCategory">
+           {{item.id}} <span (click)="clickSuperhero()">{{item.name}}</span> {{item.img}}
+         </li>
+        </ul>
      
     </div>
   </div>

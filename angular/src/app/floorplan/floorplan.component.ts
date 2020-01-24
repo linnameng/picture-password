@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Item } from '../models/app.models';
 
@@ -12,6 +12,8 @@ export class FloorplanComponent implements AfterViewInit {
 
   current: string;
   currentCharacter: string;
+  currentCategory: Item[] = [];
+
   heroes: Item[] = [
     { id: 11, name: 'Dr Nice', img: 't' },
     { id: 12, name: 'Narco', img: 't' },
@@ -25,8 +27,13 @@ export class FloorplanComponent implements AfterViewInit {
     { id: 20, name: 'Tornado', img: 't' }
   ];
 
-  constructor(private router: Router) {
+  activities: Item[] = [
+    { id: 21, name: 'Skiing', img: 't' },
+    { id: 22, name: 'Dancing', img: 't' }
+  ]
 
+  constructor(private router: Router) {
+    this.currentCategory = this.heroes;
   }
 
   ngOnInit() {
@@ -37,6 +44,10 @@ export class FloorplanComponent implements AfterViewInit {
 
   clickSuperheroes(event: any) {
     this.currentCharacter = 'iron-man';
+  }
+
+  clickSuperhero() {
+    this.currentCategory = this.activities;
   }
 
   generateRandomUserId() {
