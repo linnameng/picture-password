@@ -10,9 +10,9 @@ import { Item } from '../models/app.models';
 
 export class FloorplanComponent implements AfterViewInit {
 
-  current: string;
   currentCharacter: string;
   currentCategory: Item[] = [];
+  currentStage: number;
 
   heroes: Item[] = [
     { id: 1, name: 'Batman', img: 'assets/images/batman.jpg' },
@@ -28,8 +28,14 @@ export class FloorplanComponent implements AfterViewInit {
     { id: 22, name: 'Dancing', img: 't' }
   ]
 
+  clothes: Item[] = [
+    { id: 23, name: 'Orange scarf', img: 't' },
+    { id: 24, name: 'Blue coat', img: 't' }
+  ]
+
   constructor(private router: Router) {
     this.currentCategory = this.heroes;
+    this.currentStage = 0;
   }
 
   ngOnInit() {
@@ -38,12 +44,13 @@ export class FloorplanComponent implements AfterViewInit {
   ngAfterViewInit() {
   }
 
-  clickSuperheroes(event: any) {
-    this.currentCharacter = 'iron-man';
-  }
-
-  clickSuperhero() {
-    this.currentCategory = this.activities;
+  clickItem() {
+    this.currentStage++;
+    if (this.currentStage == 1) {
+      this.currentCategory = this.activities;
+    } else if (this.currentStage == 2) {
+      this.currentCategory = this.clothes;
+    }
   }
 
   generateRandomUserId() {
