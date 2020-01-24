@@ -29,8 +29,12 @@ figure figcaption {
   font-size: medium;
 }
 
-.img-title {
-  text-align: center;
+.story {
+  font-family: 'Oswald', sans-serif;
+}
+
+.story-bits {
+  font-family: 'Oswald', sans-serif;
 }
 
 .title {
