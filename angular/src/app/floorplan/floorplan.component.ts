@@ -13,19 +13,24 @@ export class FloorplanComponent implements AfterViewInit {
   currentCharacter: string;
   currentCategory: Item[] = [];
   currentStage: number;
+  currentTitle: string;
 
   heroes: Item[] = [
-    { id: 1, name: 'Batman', img: 'assets/images/batman.jpg' },
-    { id: 2, name: 'Captain Marvel', img: 'assets/images/captainmarvel.jpg' },
-    { id: 3, name: 'Iron Man', img: 'assets/images/iron-man.jpg' },
-    { id: 4, name: 'Storm', img: 'assets/images/storm.jpg' },
-    { id: 5, name: 'Spiderman', img: 'assets/images/spiderman.jpg' },
-    { id: 6, name: 'Wonder Woman', img: 'assets/images/wonderwoman.jpg' },
+    { id: 1, name: 'Batman', img: 'assets/heroes/batman.jpg' },
+    { id: 2, name: 'Captain Marvel', img: 'assets/heroes/captainmarvel.jpg' },
+    { id: 3, name: 'Iron Man', img: 'assets/heroes/iron-man.jpg' },
+    { id: 4, name: 'Storm', img: 'assets/heroes/storm.jpg' },
+    { id: 5, name: 'Spiderman', img: 'assets/heroes/spiderman.jpg' },
+    { id: 6, name: 'Wonder Woman', img: 'assets/heroes/wonderwoman.jpg' },
   ];
 
   activities: Item[] = [
-    { id: 21, name: 'Skiing', img: 't' },
-    { id: 22, name: 'Dancing', img: 't' }
+    { id: 21, name: 'Skiing', img: 'assets/activities/skiing.jpg' },
+    { id: 22, name: 'Dancing', img: 'assets/activities/dancing.jpg' },
+    { id: 22, name: 'Surfing', img: 'assets/activities/surfing.jpg' },
+    { id: 22, name: 'Singing', img: 'assets/activities/singing.jpg' },
+    { id: 22, name: 'Climbing', img: 'assets/activities/climbing.jpg' },
+    { id: 22, name: 'Swimming', img: 'assets/activities/swimming.jpg' }
   ]
 
   clothes: Item[] = [
@@ -39,6 +44,7 @@ export class FloorplanComponent implements AfterViewInit {
   }
 
   ngOnInit() {
+    this.currentTitle = "Who's your favourite character?";
   }
 
   ngAfterViewInit() {
@@ -48,8 +54,10 @@ export class FloorplanComponent implements AfterViewInit {
     this.currentStage++;
     if (this.currentStage == 1) {
       this.currentCategory = this.activities;
+      this.currentTitle = "What's their favourite hobby?";
     } else if (this.currentStage == 2) {
       this.currentCategory = this.clothes;
+      this.currentTitle = "What do they love to wear?";
     } else if (this.currentStage == 3) {
       this.currentCategory = undefined;
     }
