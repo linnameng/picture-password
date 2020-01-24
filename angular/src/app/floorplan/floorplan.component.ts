@@ -72,6 +72,7 @@ export class FloorplanComponent implements AfterViewInit {
 
   restart() {
     this.currentCategory = this.heroes;
+    this.currentTitle = "Who's your favourite character?"
     this.currentStage = 0;
   }
 
