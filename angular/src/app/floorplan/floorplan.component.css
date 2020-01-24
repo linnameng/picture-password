@@ -9,11 +9,13 @@ figure {
   display: inline-block;
   margin-bottom: auto;
 }
+
 figure img {
   vertical-align: top;
   height: 70px;
   border-radius: 25px;
 }
+
 figure figcaption {
   text-align: center;
 }
@@ -56,4 +58,15 @@ li {
   margin-bottom: 40px;
   padding-top: 7.5px;
   padding: 0;
+}
+
+.story-container {
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  border: 10px solid;
+}
+
+.story-part {
+  width: 150px;
 }
