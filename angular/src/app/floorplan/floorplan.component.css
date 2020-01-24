@@ -29,6 +29,10 @@ figure figcaption {
   color: #E62886;
 }
 
+ul {
+  columns: 3;
+}
+
 li {
   list-style-type: none;
   font-family: 'Oswald', sans-serif;
