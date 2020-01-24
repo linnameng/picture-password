@@ -5,9 +5,9 @@
       <table class="u-full-width">
         <thead>
           <tr>
-            <th>Character</th>
-            <th>Is doing...</th>
-            <th>Wearing</th>
+            <th>Spiderman</th>
+            <th>Is...</th>
+            <th>Wearing a pink hat</th>
           </tr>
         </thead>
         <tbody>
@@ -25,9 +25,9 @@
       <table class="u-full-width">
         <thead>
           <tr>
-            <th>Character</th>
-            <th>Is doing...</th>
-            <th>Wearing</th>
+            <th>Spiderman</th>
+            <th>Is surfing</th>
+            <th>Wearing...</th>
           </tr>
         </thead>
         <tbody>
@@ -45,9 +45,9 @@
       <table class="u-full-width">
         <thead>
           <tr>
-            <th>Character</th>
-            <th>Is doing...</th>
-            <th>Wearing</th>
+            <th>Spiderman</th>
+            <th>Is surfing</th>
+            <th>Wearing a pink hat</th>
           </tr>
         </thead>
         <tbody>
@@ -58,12 +58,20 @@
           </tr>
         </tbody>
       </table>
+
+      <h5>Does this look right?</h5>
+      <a class="button button-primary" href="#" (click)="login()">Yes, submit my image</a> <br/>
+      <a class="button" href="#" (click)="restart()">No, start over</a>
+    </div>
+
+    <div *ngIf="showSuccess">
+      success!
     </div>
 
     <div class="eight columns">
       {{ currentTitle }}
 
-      <div *ngIf="currentCategory; else successfulLogin">
+      <div *ngIf="currentCategory">
         <ul>
           <li *ngFor="let item of currentCategory">
             <figcaption>{{item.name}}</figcaption>
@@ -72,9 +80,7 @@
         </ul>
       </div>
 
-      <ng-template #successfulLogin>
-        <div>success</div>
-      </ng-template>
+
     </div>
   </div>
 </div>

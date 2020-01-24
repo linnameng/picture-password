@@ -14,6 +14,7 @@ export class FloorplanComponent implements AfterViewInit {
   currentCategory: Item[] = [];
   currentStage: number;
   currentTitle: string;
+  showSuccess: boolean;
 
   heroes: Item[] = [
     { id: 1, name: 'Batman', img: 'assets/heroes/batman.jpg' },
@@ -41,6 +42,7 @@ export class FloorplanComponent implements AfterViewInit {
   constructor(private router: Router) {
     this.currentCategory = this.heroes;
     this.currentStage = 0;
+    this.showSuccess = false;
   }
 
   ngOnInit() {
@@ -60,7 +62,18 @@ export class FloorplanComponent implements AfterViewInit {
       this.currentTitle = "What do they love to wear?";
     } else if (this.currentStage == 3) {
       this.currentCategory = undefined;
+      this.currentTitle = '';
     }
+  }
+
+  restart() {
+    this.currentCategory = this.heroes;
+    this.currentStage = 0;
+  }
+
+  login() {
+    this.showSuccess = true;
+    this.currentStage++;
   }
 
   generateRandomUserId() {
