@@ -74,3 +74,16 @@ li {
 .story-part {
   width: 150px;
 }
+
+.purple {
+  color: #640081;
+}
+
+.button {
+
+}
+
+.button.button-primary {
+  background-color: #E62886;
+  border-color: #E62886;
+}

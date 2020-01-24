@@ -16,6 +16,13 @@ export class FloorplanComponent implements AfterViewInit {
   currentTitle: string;
   showSuccess: boolean;
 
+  categories: Item[] = [
+    { id: 1, name: 'Superhero', img: 'assets/heroes/batman.jpg' },
+    { id: 2, name: 'Pokemon', img: 'assets/heroes/captainmarvel.jpg' },
+    { id: 3, name: 'Princess', img: 'assets/heroes/iron-man.jpg' },
+    { id: 4, name: 'My Little Pony', img: 'assets/heroes/iron-man.jpg' }
+  ];
+
   heroes: Item[] = [
     { id: 1, name: 'Batman', img: 'assets/heroes/batman.jpg' },
     { id: 2, name: 'Captain Marvel', img: 'assets/heroes/captainmarvel.jpg' },
@@ -44,35 +51,42 @@ export class FloorplanComponent implements AfterViewInit {
   ]
 
   constructor(private router: Router) {
-    this.currentCategory = this.heroes;
+    this.currentCategory = this.categories;
     this.currentStage = 0;
     this.showSuccess = false;
+    this.currentTitle = undefined;
   }
 
   ngOnInit() {
-    this.currentTitle = "Who's your favourite character?";
+    
   }
 
   ngAfterViewInit() {
   }
 
+  clickCharacterCategory() {
+    this.currentStage = 1;
+    this.currentCategory = this.heroes;
+    this.currentTitle = "Who's your favourite character?";
+  }
+
   clickItem() {
     this.currentStage++;
-    if (this.currentStage == 1) {
+    if (this.currentStage == 2) {
       this.currentCategory = this.activities;
       this.currentTitle = "What's their favourite hobby?";
-    } else if (this.currentStage == 2) {
+    } else if (this.currentStage == 3) {
       this.currentCategory = this.clothes;
       this.currentTitle = "What do they love to wear?";
-    } else if (this.currentStage == 3) {
+    } else if (this.currentStage == 4) {
       this.currentCategory = undefined;
       this.currentTitle = '';
     }
   }
 
   restart() {
-    this.currentCategory = this.heroes;
-    this.currentTitle = "Who's your favourite character?"
+    this.currentCategory = this.categories;
+    this.currentTitle = undefined;
     this.currentStage = 0;
   }
 

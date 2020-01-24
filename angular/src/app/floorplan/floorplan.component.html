@@ -4,7 +4,25 @@
 
 <div class="container">
   <div class="row">
-    <div *ngIf="currentStage == 1">
+    <div *ngIf="currentStage == 0">
+      <h4 class="purple">Welcome to Popjam!</h4>
+      Let's get started by logging in with your <b>picture password</b>.<br/>
+      Select from the following options to complete the <b>story</b> about your favorite character.
+
+      <br/><br/>
+      <h4 class="title">Is your character a...</h4>
+
+      <ul>
+        <li *ngFor="let item of currentCategory">
+          <figure>
+            <figcaption class="img-title">{{item.name}}</figcaption>
+            <img (click)="clickCharacterCategory()" src={{item.img}}/>
+          </figure>
+      </li>
+      </ul>
+    </div>
+
+    <div *ngIf="currentStage == 2">
       <h4>The story so far...</h4>
       <table class="u-full-width">
         <thead>
@@ -24,7 +42,7 @@
       </table>
     </div>
 
-    <div *ngIf="currentStage == 2">
+    <div *ngIf="currentStage == 3">
       <h4>The story so far...</h4>
       <table class="u-full-width">
         <thead>
@@ -44,7 +62,7 @@
       </table>
     </div>
 
-    <div *ngIf="currentStage == 3">
+    <div *ngIf="currentStage == 4">
       <h4>The story so far...</h4>
       <table class="u-full-width">
         <thead>
@@ -75,7 +93,7 @@
     <div class="eight columns">
       <div class="title">{{ currentTitle }}</div>
 
-      <div *ngIf="currentCategory">
+      <div *ngIf="currentCategory && currentStage > 0">
         <ul>
           <li *ngFor="let item of currentCategory">
             <figure>
