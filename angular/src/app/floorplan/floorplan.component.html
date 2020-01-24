@@ -23,8 +23,23 @@
       </ul>
     </div>
 
+    <div class="eight columns">
+      <div class="title">{{ currentTitle }}</div>
+
+      <div *ngIf="currentCategory && currentStage > 0">
+        <ul>
+          <li *ngFor="let item of currentCategory">
+            <figure>
+              <figcaption class="img-title">{{item.name}}</figcaption>
+              <img (click)="clickItem()" src={{item.img}}/>
+            </figure>
+         </li>
+        </ul>
+      </div>
+    </div>
+
     <div *ngIf="currentStage == 2">
-      <h4>The story so far...</h4>
+      <h4 class="purple">The story so far...</h4>
       <table class="u-full-width">
         <thead>
           <tr>
@@ -44,7 +59,7 @@
     </div>
 
     <div *ngIf="currentStage == 3">
-      <h4>The story so far...</h4>
+      <h4 class="purple">The story so far...</h4>
       <table class="u-full-width">
         <thead>
           <tr>
@@ -64,7 +79,7 @@
     </div>
 
     <div *ngIf="currentStage == 4">
-      <h4>The story so far...</h4>
+      <h4 class="purple">The story so far...</h4>
       <table class="u-full-width">
         <thead>
           <tr>
@@ -87,24 +102,16 @@
       <a class="button" href="#" (click)="restart()">No, start over</a>
     </div>
 
+    <div *ngIf="currentStage > 0 && currentStage < 4">
+      <h5 class="title">Made a mistake?</h5>
+      <div class="center-container">
+        <a class="button button-primary center" href="#" (click)="restart()">Restart from the beginning</a> <br/>
+      </div>
+    </div>
+
     <div *ngIf="showSuccess">
       success!
     </div>
 
-    <div class="eight columns">
-      <div class="title">{{ currentTitle }}</div>
 
-      <div *ngIf="currentCategory && currentStage > 0">
-        <ul>
-          <li *ngFor="let item of currentCategory">
-            <figure>
-              <figcaption class="img-title">{{item.name}}</figcaption>
-              <img (click)="clickItem()" src={{item.img}}/>
-            </figure>
-         </li>
-        </ul>
-      </div>
-
-
-    </div>
   </div>
