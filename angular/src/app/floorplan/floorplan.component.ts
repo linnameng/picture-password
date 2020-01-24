@@ -34,8 +34,12 @@ export class FloorplanComponent implements AfterViewInit {
   ]
 
   clothes: Item[] = [
-    { id: 23, name: 'Orange scarf', img: 't' },
-    { id: 24, name: 'Blue coat', img: 't' }
+    { id: 23, name: 'Pink hat', img: 'assets/clothes/pink-hat.jpg' },
+    { id: 24, name: 'Blue coat', img: 'assets/clothes/blue-coat.jpeg' },
+    { id: 24, name: 'Red sunglasses', img: 'assets/clothes/red-sunglasses.jpg' },
+    { id: 24, name: 'Orange scarf', img: 'assets/clothes/orange-scarf.jpeg' },
+    { id: 24, name: 'Green tutu', img: 'assets/clothes/green-tutu.jpg' },
+    { id: 24, name: 'Yellow boots', img: 'assets/clothes/yellow-boots.jpeg' }
   ]
 
   constructor(private router: Router) {
