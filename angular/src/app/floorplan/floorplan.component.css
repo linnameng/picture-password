@@ -1,7 +1,25 @@
 
 img {
   height: 70px;
+  border-radius: 25px;
+  display: inline-block;
+}
 
+figure {
+  display: inline-block;
+  margin-bottom: auto;
+}
+figure img {
+  vertical-align: top;
+  height: 70px;
+  border-radius: 25px;
+}
+figure figcaption {
+  text-align: center;
+}
+
+.img-title {
+  text-align: center;
 }
 
 .title {

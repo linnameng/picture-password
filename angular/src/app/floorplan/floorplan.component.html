@@ -1,23 +1,88 @@
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="four columns">
-        <div class="title">{{ currentTitle }}</div>
+<div class="container">
+  <div class="row">
+    <div *ngIf="currentStage == 1">
+      <h4>The story so far...</h4>
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Spiderman</th>
+            <th>Is...</th>
+            <th>Wearing a pink hat</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="assets/images/spiderman.jpg"></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-        <div *ngIf="currentCategory; else successfulLogin">
-          <ul>
-            <li *ngFor="let item of currentCategory">
-              <figcaption>{{item.name}}</figcaption>
-            <img (click)="clickItem()" src={{item.img}}/>
-          </li>
-          </ul>
-        </div>
+    <div *ngIf="currentStage == 2">
+      <h4>The story so far...</h4>
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Spiderman</th>
+            <th>Is surfing</th>
+            <th>Wearing...</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="assets/images/spiderman.jpg"></td>
+            <td><img src="assets/activities/surfing.jpg"></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-        <ng-template #successfulLogin>
-          <div>success</div>
-        </ng-template>
+    <div *ngIf="currentStage == 3">
+      <h4>The story so far...</h4>
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Spiderman</th>
+            <th>Is surfing</th>
+            <th>Wearing a pink hat</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="assets/images/spiderman.jpg"></td>
+            <td><img src="assets/activities/surfing.jpg"></td>
+            <td><img src="assets/clothes/pink-hat.jpg"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h5>Does this look right?</h5>
+      <a class="button button-primary" href="#" (click)="login()">Yes, submit my image</a> <br/>
+      <a class="button" href="#" (click)="restart()">No, start over</a>
+    </div>
+
+    <div *ngIf="showSuccess">
+      success!
+    </div>
+
+    <div class="eight columns">
+      <div class="title">{{ currentTitle }}</div>
+
+      <div *ngIf="currentCategory">
+        <ul>
+          <li *ngFor="let item of currentCategory">
+            <figure>
+              <figcaption class="img-title">{{item.name}}</figcaption>
+              <img (click)="clickItem()" src={{item.img}}/>
+            </figure>
+         </li>
+        </ul>
       </div>
+
+
     </div>
   </div>
-</body>
 
