@@ -25,12 +25,12 @@ export class FloorplanComponent implements AfterViewInit {
   ];
 
   activities: Item[] = [
-    { id: 21, name: 'Skiing', img: 't' },
-    { id: 22, name: 'Dancing', img: 't' },
-    { id: 22, name: 'Surfing', img: 'assets/activities/surfboard.jpg' },
-    { id: 22, name: 'Singing', img: 't' },
-    { id: 22, name: 'Climbing', img: 't' },
-    { id: 22, name: 'Swimming', img: 't' }
+    { id: 21, name: 'Skiing', img: 'assets/activities/skiing.jpg' },
+    { id: 22, name: 'Dancing', img: 'assets/activities/dancing.jpg' },
+    { id: 22, name: 'Surfing', img: 'assets/activities/surfing.jpg' },
+    { id: 22, name: 'Singing', img: 'assets/activities/singing.jpg' },
+    { id: 22, name: 'Climbing', img: 'assets/activities/climbing.jpg' },
+    { id: 22, name: 'Swimming', img: 'assets/activities/swimming.jpg' }
   ]
 
   clothes: Item[] = [
