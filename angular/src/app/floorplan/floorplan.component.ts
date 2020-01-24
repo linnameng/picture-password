@@ -17,10 +17,10 @@ export class FloorplanComponent implements AfterViewInit {
   showSuccess: boolean;
 
   categories: Item[] = [
-    { id: 1, name: 'Superhero', img: 'assets/heroes/batman.jpg' },
-    { id: 2, name: 'Pokemon', img: 'assets/heroes/captainmarvel.jpg' },
-    { id: 3, name: 'Princess', img: 'assets/heroes/iron-man.jpg' },
-    { id: 4, name: 'My Little Pony', img: 'assets/heroes/iron-man.jpg' }
+    { id: 1, name: 'Superhero', img: 'assets/categories/super.png' },
+    { id: 2, name: 'Pokemon', img: 'assets/categories/pokemon.png' },
+    { id: 3, name: 'Princess', img: 'assets/categories/princess.png' },
+    { id: 4, name: 'My Little Pony', img: 'assets/categories/pony.png' }
   ];
 
   heroes: Item[] = [
