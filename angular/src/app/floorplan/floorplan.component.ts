@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Video, Genre } from '../models/app.models';
-import { FloorplanService } from './floorplan.service';
+import { Item } from '../models/app.models';
 
 @Component({
   selector: 'app-video',
@@ -11,21 +10,22 @@ import { FloorplanService } from './floorplan.service';
 
 export class FloorplanComponent implements AfterViewInit {
 
-  seenVideosForGenre: Video[];
-  randomVideo: Video;
-  allGenres: Genre[];
-  selectedGenreId: string;
-  userId: string;
-
-  isNextButtonEnabled = false;
-  isDisplayNoVideoMessage = true;
-  noVideoMessage: string;
-
   current: string;
+  currentCharacter: string;
+  heroes: Item[] = [
+    { id: 11, name: 'Dr Nice', img: 't' },
+    { id: 12, name: 'Narco', img: 't' },
+    { id: 13, name: 'Bombasto', img: 't' },
+    { id: 14, name: 'Celeritas', img: 't' },
+    { id: 15, name: 'Magneta', img: 't' },
+    { id: 16, name: 'RubberMan', img: 't' },
+    { id: 17, name: 'Dynama', img: 't' },
+    { id: 18, name: 'Dr IQ', img: 't' },
+    { id: 19, name: 'Magma', img: 't' },
+    { id: 20, name: 'Tornado', img: 't' }
+  ];
 
-  @ViewChild('desk') desk: ElementRef;
-
-  constructor(private router: Router, private videoService: FloorplanService) {
+  constructor(private router: Router) {
 
   }
 
@@ -33,25 +33,10 @@ export class FloorplanComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    console.log(this.desk.nativeElement);
   }
 
-  onClickImage(event: any) {
-    console.log(event.target.id);
-    this.desk.nativeElement.innerHTML = '<img src="assets/profile-images/adam.jpeg">';
-
-  }
-
-  updateDisplayNoVideos() {
-    console.log('display no videos');
-    if (this.selectedGenreId == undefined) {
-      this.noVideoMessage = 'Select a genre to play a random video';
-    } else {
-      this.noVideoMessage = 'No more videos in genre';
-    }
-
-    this.isDisplayNoVideoMessage = true;
-    this.isNextButtonEnabled = false;
+  clickSuperheroes(event: any) {
+    this.currentCharacter = 'iron-man';
   }
 
   generateRandomUserId() {

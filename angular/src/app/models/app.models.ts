@@ -11,3 +11,8 @@ export class Video {
   viewed: number;
 }
 
+export class Item {
+  id: number;
+  name: string;
+  img: string;
+}
