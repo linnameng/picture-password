@@ -3,9 +3,11 @@
     <div class="four columns">
       {{ currentCharacter }}
 
+      {{ currentTitle }}
         <ul>
           <li *ngFor="let item of currentCategory">
-           {{item.id}} <span>{{item.name}}</span> <img (click)="clickItem()" src={{item.img}}/>
+            <figcaption>{{item.name}}</figcaption>
+           <img (click)="clickItem()" src={{item.img}}/>
          </li>
         </ul>
      
