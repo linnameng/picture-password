@@ -89,3 +89,17 @@ li {
 .story-part {
   width: 150px;
 }
+
+.purple {
+  color: #640081;
+}
+.button.button-primary {
+  background-color: #E62886;
+  border-color: #E62886;
+}
+.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
