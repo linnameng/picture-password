@@ -15,17 +15,21 @@ export class FloorplanComponent implements AfterViewInit {
   currentStage: number;
 
   heroes: Item[] = [
-    { id: 1, name: 'Batman', img: 'assets/images/batman.jpg' },
-    { id: 2, name: 'Captain Marvel', img: 'assets/images/captainmarvel.jpg' },
-    { id: 3, name: 'Iron Man', img: 'assets/images/iron-man.jpg' },
-    { id: 4, name: 'Storm', img: 'assets/images/storm.jpg' },
-    { id: 5, name: 'Spiderman', img: 'assets/images/spiderman.jpg' },
-    { id: 6, name: 'Wonder Woman', img: 'assets/images/wonderwoman.jpg' },
+    { id: 1, name: 'Batman', img: 'assets/heroes/batman.jpg' },
+    { id: 2, name: 'Captain Marvel', img: 'assets/heroes/captainmarvel.jpg' },
+    { id: 3, name: 'Iron Man', img: 'assets/heroes/iron-man.jpg' },
+    { id: 4, name: 'Storm', img: 'assets/heroes/storm.jpg' },
+    { id: 5, name: 'Spiderman', img: 'assets/heroes/spiderman.jpg' },
+    { id: 6, name: 'Wonder Woman', img: 'assets/heroes/wonderwoman.jpg' },
   ];
 
   activities: Item[] = [
     { id: 21, name: 'Skiing', img: 't' },
-    { id: 22, name: 'Dancing', img: 't' }
+    { id: 22, name: 'Dancing', img: 't' },
+    { id: 22, name: 'Surfing', img: 'assets/activities/surfboard.jpg' },
+    { id: 22, name: 'Singing', img: 't' },
+    { id: 22, name: 'Climbing', img: 't' },
+    { id: 22, name: 'Swimming', img: 't' }
   ]
 
   clothes: Item[] = [
