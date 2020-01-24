@@ -13,9 +13,13 @@ figure img {
   vertical-align: top;
   height: 70px;
   border-radius: 25px;
+
 }
 figure figcaption {
   text-align: center;
+  color: #640081;
+  font-family: 'Oswald', sans-serif;
+  font-size: medium;
 }
 
 .img-title {
@@ -23,6 +27,7 @@ figure figcaption {
 }
 
 .title {
+  text-align: center;
   font-weight: bold;
   font-family: 'Oswald', sans-serif;
   font-size: large;
@@ -35,9 +40,6 @@ ul {
 
 li {
   list-style-type: none;
-  font-family: 'Oswald', sans-serif;
-  font-size: medium;
-  color: #00A2DE;
 }
 
 #popjam-logo {
