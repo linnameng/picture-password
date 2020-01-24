@@ -1,12 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="four columns">
-      {{ currentCharacter }}
+      {{ currentTitle }}
 
       <div *ngIf="currentCategory; else successfulLogin">
         <ul>
           <li *ngFor="let item of currentCategory">
-           {{item.id}} <span>{{item.name}}</span> <img (click)="clickItem()" src={{item.img}}/>
+            <figcaption>{{item.name}}</figcaption>
+           <img (click)="clickItem()" src={{item.img}}/>
          </li>
         </ul>
       </div>
