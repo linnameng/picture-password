@@ -13,16 +13,12 @@ export class FloorplanComponent implements AfterViewInit {
   current: string;
   currentCharacter: string;
   heroes: Item[] = [
-    { id: 11, name: 'Dr Nice', img: 't' },
-    { id: 12, name: 'Narco', img: 't' },
-    { id: 13, name: 'Bombasto', img: 't' },
-    { id: 14, name: 'Celeritas', img: 't' },
-    { id: 15, name: 'Magneta', img: 't' },
-    { id: 16, name: 'RubberMan', img: 't' },
-    { id: 17, name: 'Dynama', img: 't' },
-    { id: 18, name: 'Dr IQ', img: 't' },
-    { id: 19, name: 'Magma', img: 't' },
-    { id: 20, name: 'Tornado', img: 't' }
+    { id: 1, name: 'Batman', img: 'assets/images/batman.jpg' },
+    { id: 2, name: 'Captain Marvel', img: 'assets/images/captainmarvel.jpg' },
+    { id: 3, name: 'Iron Man', img: 'assets/images/iron-man.jpg' },
+    { id: 4, name: 'Storm', img: 'assets/images/storm.jpg' },
+    { id: 5, name: 'Spiderman', img: 'assets/images/spiderman.jpg' },
+    { id: 6, name: 'Wonder Woman', img: 'assets/images/wonderwoman.jpg' },
   ];
 
   constructor(private router: Router) {
