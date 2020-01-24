@@ -13,6 +13,7 @@ export class FloorplanComponent implements AfterViewInit {
   currentCharacter: string;
   currentCategory: Item[] = [];
   currentStage: number;
+  currentTitle: string;
 
   heroes: Item[] = [
     { id: 1, name: 'Batman', img: 'assets/heroes/batman.jpg' },
@@ -43,6 +44,7 @@ export class FloorplanComponent implements AfterViewInit {
   }
 
   ngOnInit() {
+    this.currentTitle = "Who's your favourite character?";
   }
 
   ngAfterViewInit() {
@@ -52,8 +54,10 @@ export class FloorplanComponent implements AfterViewInit {
     this.currentStage++;
     if (this.currentStage == 1) {
       this.currentCategory = this.activities;
+      this.currentTitle = "What's their favourite hobby?";
     } else if (this.currentStage == 2) {
       this.currentCategory = this.clothes;
+      this.currentTitle = "What do they love to wear?";
     } else if (this.currentStage == 3) {
       this.currentCategory = undefined;
     }
