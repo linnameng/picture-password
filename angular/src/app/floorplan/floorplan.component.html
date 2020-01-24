@@ -3,18 +3,12 @@
     <div class="eight columns">
       {{ currentCharacter }}
 
-      <table class="chessboard">
-        <tr class="chessboard">
-          <td id="select-superheroes" (click)="clickSuperheroes($event)" class="chessboard"></td>
-          <td class="chessboard"></td>
-        </tr>
-      </table>
+      <h3>Pick your character</h3>
       <ul>
          <li *ngFor="let hero of heroes">
           {{hero.id}} {{hero.name}} <img src={{hero.img}}/>
         </li>
       </ul>
-     
     </div>
   </div>
 </div>
