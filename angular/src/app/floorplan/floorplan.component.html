@@ -1,6 +1,66 @@
 <div class="container">
   <div class="row">
-    <div class="four columns">
+    <div *ngIf="currentStage == 1">
+      <h4>The story so far...</h4>
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Character</th>
+            <th>Is doing...</th>
+            <th>Wearing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="assets/images/spiderman.jpg"></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div *ngIf="currentStage == 2">
+      <h4>The story so far...</h4>
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Character</th>
+            <th>Is doing...</th>
+            <th>Wearing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="assets/images/spiderman.jpg"></td>
+            <td><img src="assets/images/spiderman.jpg"></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div *ngIf="currentStage == 3">
+      <h4>The story so far...</h4>
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Character</th>
+            <th>Is doing...</th>
+            <th>Wearing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="assets/images/spiderman.jpg"></td>
+            <td><img src="assets/images/spiderman.jpg"></td>
+            <td><img src="assets/images/spiderman.jpg"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="eight columns">
       {{ currentTitle }}
 
       <div *ngIf="currentCategory; else successfulLogin">
