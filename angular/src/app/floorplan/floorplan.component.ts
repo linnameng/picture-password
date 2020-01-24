@@ -24,30 +24,30 @@ export class FloorplanComponent implements AfterViewInit {
   ];
 
   heroes: Item[] = [
-    { id: 1, name: 'Batman', img: 'assets/heroes/batman.jpg' },
-    { id: 2, name: 'Captain Marvel', img: 'assets/heroes/captainmarvel.jpg' },
-    { id: 3, name: 'Iron Man', img: 'assets/heroes/iron-man.jpg' },
-    { id: 4, name: 'Storm', img: 'assets/heroes/storm.jpg' },
-    { id: 5, name: 'Spiderman', img: 'assets/heroes/spiderman.jpg' },
-    { id: 6, name: 'Wonder Woman', img: 'assets/heroes/wonderwoman.jpg' },
+    { id: 10, name: 'Batman', img: 'assets/heroes/batman.jpg' },
+    { id: 11, name: 'Captain Marvel', img: 'assets/heroes/captainmarvel.jpg' },
+    { id: 12, name: 'Iron Man', img: 'assets/heroes/iron-man.jpg' },
+    { id: 13, name: 'Storm', img: 'assets/heroes/storm.jpg' },
+    { id: 14, name: 'Spiderman', img: 'assets/heroes/spiderman.jpg' },
+    { id: 15, name: 'Wonder Woman', img: 'assets/heroes/wonderwoman.jpg' },
   ];
 
   activities: Item[] = [
     { id: 21, name: 'Skiing', img: 'assets/activities/skiing.jpg' },
     { id: 22, name: 'Dancing', img: 'assets/activities/dancing.jpg' },
-    { id: 22, name: 'Surfing', img: 'assets/activities/surfing.jpg' },
-    { id: 22, name: 'Singing', img: 'assets/activities/singing.jpg' },
-    { id: 22, name: 'Climbing', img: 'assets/activities/climbing.jpg' },
-    { id: 22, name: 'Swimming', img: 'assets/activities/swimming.jpg' }
+    { id: 23, name: 'Surfing', img: 'assets/activities/surfing.jpg' },
+    { id: 24, name: 'Singing', img: 'assets/activities/singing.jpg' },
+    { id: 25, name: 'Climbing', img: 'assets/activities/climbing.jpg' },
+    { id: 26, name: 'Swimming', img: 'assets/activities/swimming.jpg' }
   ]
 
   clothes: Item[] = [
-    { id: 23, name: 'Pink hat', img: 'assets/clothes/pink-hat.jpg' },
-    { id: 24, name: 'Blue coat', img: 'assets/clothes/blue-coat.jpeg' },
-    { id: 24, name: 'Red sunglasses', img: 'assets/clothes/red-sunglasses.jpg' },
-    { id: 24, name: 'Orange scarf', img: 'assets/clothes/orange-scarf.jpeg' },
-    { id: 24, name: 'Green tutu', img: 'assets/clothes/green-tutu.jpg' },
-    { id: 24, name: 'Yellow boots', img: 'assets/clothes/yellow-boots.jpeg' }
+    { id: 30, name: 'Pink hat', img: 'assets/clothes/pink-hat.jpg' },
+    { id: 31, name: 'Blue coat', img: 'assets/clothes/blue-coat.jpeg' },
+    { id: 32, name: 'Red sunglasses', img: 'assets/clothes/red-sunglasses.jpg' },
+    { id: 33, name: 'Orange scarf', img: 'assets/clothes/orange-scarf.jpeg' },
+    { id: 34, name: 'Green tutu', img: 'assets/clothes/green-tutu.jpg' },
+    { id: 35, name: 'Yellow boots', img: 'assets/clothes/yellow-boots.jpeg' }
   ]
 
   constructor(private router: Router) {
